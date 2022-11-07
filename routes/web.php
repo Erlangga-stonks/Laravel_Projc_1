@@ -14,5 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Main' ,[
+        "title" => "First Homepage"
+    ]);
+});
+
+Route::get('/about', function(){
+    return view('about',[
+        "title"=> "About",
+        "name" => "Komi Shouko",
+        "Jobs"=>  "Student at Itan Private High School ",
+        "image"=> "Komi.png",
+        "desc" => "Hello i'm komi Shouko i'm 17 years old and right now i'm looking for 
+                   friends" 
+    ]);
 });
